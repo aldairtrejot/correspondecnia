@@ -604,7 +604,7 @@
         display: inline-block;
         vertical-align: middle;
         width: 200px;
-        height: 30px;
+        height: 90px;
         background: url("#{resource['ultima-layout:images/meddef/logo_SMD-h.png']}") top left no-repeat; }
       .wizard-body .wizard-wrapper .wizard-topbar .profile {
         display: -webkit-box;
