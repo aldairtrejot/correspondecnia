@@ -27,7 +27,7 @@ public class Validacion {
 		Integer numeroTurno = sqlSession.selectOne("tbl_turno.listadoTurno", numTurno);
 		if (numTurno != "" ) {
 			if (numeroTurno == null) {
-				mensajesC.messageError("El Núm. de Turno No Esta Asociado a Correspondencia");
+				mensajesC.messageError("El No. de Turno No Esta Asociado a Correspondencia");
 			}
 		}
 	}

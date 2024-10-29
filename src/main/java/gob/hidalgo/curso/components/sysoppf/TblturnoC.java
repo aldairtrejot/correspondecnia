@@ -58,8 +58,13 @@ public class TblturnoC extends ConstantesOfiPartPf{
 	public Modelo<TblturnoEO> modelo(TblturnoEO tblturnoEO) {
 		Boolean bool = usuariosAdmin.usuarioAdmin();
 		List<TblturnoEO> listado;
-		String fechaInicio = fechaC.cambiarFecha(tblturnoEO.getFechaInicio());
-		String fechaFinal = fechaC.cambiarFecha(tblturnoEO.getFechaFinal());
+		//String fechaInicio = fechaC.cambiarFecha(tblturnoEO.getFechaInicio());
+		//String fechaFinal = fechaC.cambiarFecha(tblturnoEO.getFechaFinal());
+		
+		Date fechaInicio = tblturnoEO.getFechaInicio();
+		Date fechaFinal = tblturnoEO.getFechaFinal();
+		
+		
 		Integer usuarioSys = usuarioSistemaC.usuarioActual();
 		HashMap<String, Object> parametros;
 		parametros = new HashMap<>();
@@ -81,11 +86,12 @@ public class TblturnoC extends ConstantesOfiPartPf{
 			tbl_turno.setFec_vencimiento(fechaC.agregarMeses(fechaAuxDate));
 		}*/
 		
+		/*
 		if (tbl_turno.getFecha_reg() == null && tbl_turno.getFec_vencimiento() == null) {
 				tbl_turno.setFecha_reg(fechaC.FechaActual());
 				tbl_turno.setFec_vencimiento(fechaC.agregarMeses(tbl_turno.getFecha_reg()));
 		}
-		
+		*/
 		
 		tbl_turno.setNum_turno(catConsecutivosC.numOficio(tbl_turno.getId(), tbl_turno.getAnio_oficio(),	tbl_turno.getNum_turno(), cveNom));
 		HashMap<String, Object> parametros;

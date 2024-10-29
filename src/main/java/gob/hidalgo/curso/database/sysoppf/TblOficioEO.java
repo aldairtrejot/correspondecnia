@@ -13,9 +13,9 @@ import lombok.ToString;
 @Setter
 @ToString
 @Alias("TblOficioEO")
-public class TblOficioEO  extends EntityObject implements Serializable{
+public class TblOficioEO extends EntityObject implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	private Integer id;
 	private String num_oficio;
 	private String remitente;
@@ -25,21 +25,22 @@ public class TblOficioEO  extends EntityObject implements Serializable{
 	private Date fec_registro;
 	private String num_turno_orig;
 	private Date fecha_acuse;
-	
-	//Messages @NotNull
-	@NotNull (message = "Ingresar el Año")
+
+	// Messages
+	// Messages @NotNull
+	@NotNull(message = "Ingresar el Año")
 	private Integer anio;
-	
-	@NotNull (message = "Ingresar el Área")
+
+	@NotNull(message = "Ingresar el Área")
 	private Integer id_area;
-	
-	@NotNull (message = "Ingresar el Usuario")
+
+	@NotNull(message = "Ingresar el Usuario")
 	private Integer id_usuario_sol;
-	
+
 	// FECHA_BUSQUEDA
-		private Date fechaInicio;
-		private Date fechaFinal;
-	
+	private Date fechaInicio;
+	private Date fechaFinal;
+
 	public TblOficioEO() {
 		super();
 	}

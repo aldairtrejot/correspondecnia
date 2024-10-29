@@ -27,10 +27,10 @@ public class TblTarjetaInfoEO extends EntityObject implements Serializable {
 	private Date fecha_acuse;
 
 	// Messages @NotNull
-	@NotNull(message = "Ingresar el Año")
+	@NotNull(message = "Ingresar el A�o")
 	private Integer anio;
 
-	@NotNull(message = "Ingresar el Área")
+	@NotNull(message = "Ingresar el Area")
 	private Integer id_area;
 
 	@NotNull(message = "Ingresar el Usuario")

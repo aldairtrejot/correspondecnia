@@ -16,10 +16,10 @@
                 			<p:panelGrid columns="2">
                 				
                 				<c:if test="true">								
-								<p:outputLabel for="@next" value="Núm. Turno" style="font-weight: bold;" />
+								<p:outputLabel for="@next" value="Núm. Turno " style="font-weight: bold;" /> 
 	                			<p:inputText id="num_turno_x" value="${catalogoC.impTurno(correspondencia.num_turno,cveNom)}" size="30" disabled="true" />
 
-								<p:outputLabel for="@next" value="Año" style="font-weight: bold"  />
+								<p:outputLabel for="@next" value="Año*" style="font-weight: bold"  />
 								<p:selectOneMenu value="#{correspondencia.anio_oficio}" disabled="${correspondencia.id != null}" style="width: 30% !important"  >
 								<p:ajax listener="#{catalogoC.cambioTurno(correspondencia.anio_oficio)}" update="num_turno_x"/>
 								<f:selectItem itemLabel="Seleccione" itemValue="" noSelectionOption="true" /> 	
@@ -28,14 +28,14 @@
 								</c:if>
 								
 								<c:if test="${UsuariosAdmin.usuarioAdmin()}">
-								<p:outputLabel for="id_area" value="Área" style="font-weight: bold" />
+								<p:outputLabel for="id_area" value="Área*" style="font-weight: bold" />
 								<p:selectOneMenu id="id_area" value="#{correspondencia.id_area_atension}" disabled="#{!UsuariosAdmin.usuarioAdmin()}" style="width: 50% !important">
 									<p:ajax execute="id_area" listener="#{catalogoC.cambioUsuarios(correspondencia.id_area_atension)}" event="focus" process="@this" update="cat_area_usuarios"/>
 									<f:selectItem itemLabel="Seleccione" itemValue="" noSelectionOption="true" />
 									<f:selectItems value="#{catalogoC.catAreaList}" />
 								</p:selectOneMenu>
 
-   								<p:outputLabel for="@next" value="Usuario" style="font-weight: bold"  />
+   								<p:outputLabel for="@next" value="Usuario*" style="font-weight: bold"  />
 								<p:selectOneMenu id="cat_area_usuarios" value="#{correspondencia.id_usuario_resp}" disabled="#{!UsuariosAdmin.usuarioAdmin()}" style="width: 30% !important">
 									<f:selectItem itemLabel="Seleccione" itemValue="" noSelectionOption="true" />
 									<f:selectItems value="#{catalogoC.catUsuariosList}" />
@@ -43,10 +43,10 @@
    								</c:if>
    								
 								<c:if test="${!UsuariosAdmin.usuarioAdmin()}">
-                				<p:outputLabel for="@next" value="Área" style="font-weight: bold" />
+                				<p:outputLabel for="@next" value="Área*" style="font-weight: bold" />
 								<p:inputText value="${resultadoCatalogoC.CatalogoArea(correspondencia.id_area_atension)}" disabled="true" size="45" />
 
-								<p:outputLabel for="@next" value="Usuario" style="font-weight: bold"  />
+								<p:outputLabel for="@next" value="Usuario*" style="font-weight: bold"  />
 								<p:inputText value="${resultadoCatalogoC.CatalogoUsuarios(correspondencia.id_usuario_resp)}" disabled="true" size="45" />
    								
    								<p:outputLabel for="@next" value="Fecha Solicitud" style="font-weight: bold;" />
@@ -56,13 +56,13 @@
 	                			<p:calendar id="inputoffecha_termino" value="#{correspondencia.fec_vencimiento}" disabled="true" locale="es" mode="popup" size="45"/>
    								</c:if>
 								
-								<p:outputLabel for="@next" value="Estatus" style="font-weight: bold"  />
+								<p:outputLabel for="@next" value="Estatus*" style="font-weight: bold"  />
 								<p:selectOneMenu value="#{correspondencia.id_estatus}" style="width: 30% !important" disabled="#{correspondencia.id_estatus == 3}" validator="#{validacion.cancelamiento}">
 									<f:selectItem itemLabel="Seleccione" itemValue="" noSelectionOption="true" />
 									<f:selectItems value="#{catalogoC.catEstatusList}" />
 								</p:selectOneMenu>
 								
-								<p:outputLabel for="@next" value="Tipo Documento" style="font-weight: bold;" />
+								<p:outputLabel for="@next" value="Tipo Documento*" style="font-weight: bold;" />
 								<p:selectOneMenu value="${correspondencia.num_expediente_ori}" style="width: 30% !important" disabled="#{!UsuariosAdmin.usuarioAdmin()}" validator="#{validacion.cancelamiento}">
 									<f:selectItem itemLabel="Seleccione" itemValue="" noSelectionOption="true" />
 									<f:selectItems value="#{catalogoC.numOficio}" />
@@ -73,14 +73,14 @@
 	                				<f:validateLength maximum="30"/>
 								</p:inputText>
 
-								<p:outputLabel for="@next" value="Abogado Responsable" style="font-weight: bold"  />
+								<p:outputLabel for="@next" value="Abogado Responsable*" style="font-weight: bold"  />
 								<p:selectOneMenu value="#{correspondencia.id_enc}" disabled="false" style="width: 30% !important"  >
 								<f:selectItem itemLabel="Seleccione" itemValue="" noSelectionOption="true" /> 	
 									<f:selectItems value="#{catalogoC.catUsuariosAbogados}" />
 								</p:selectOneMenu>
 								
 								<c:if test="${UsuariosAdmin.usuarioAdmin()}">
-									<p:outputLabel for="@next" value="Fecha Solicitud" style="font-weight: bold;" />
+									<p:outputLabel for="@next" value="Fecha Solicitud*" style="font-weight: bold;" />
 	                				<p:calendar  value="${correspondencia.fecha_reg}" size="30" disabled="false" />
 
 	                				<p:outputLabel for="@next" value="Fecha Término" style="font-weight: bold;" />

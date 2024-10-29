@@ -34,21 +34,19 @@ public class TblturnoEO  extends EntityObject implements Serializable{
 	private Integer num_fojas;
 	private Integer num_copia;
 	private Date fec_vencimiento;
-	private Date fec_registro;
 	private Integer num_tomos;
 	private String turno_sin;
 	private String rfc;
-	private String num_expediente_ori;
-	private Integer id_enc;
+	
 	
 	//Message @NotNull
 	@NotBlank (message = "Ingrese el Remitente")
 	private String remitente;
 	
-	@NotNull (message = "Ingrese el Año")
+	@NotNull (message = "Ingrese el A�o")
 	private Integer anio_oficio;
 	
-	@NotNull (message = "Ingresar el Área")
+	@NotNull (message = "Ingresar el Area")
 	private Integer id_area_atension;
 	
 	@NotNull (message = "Ingrese el Usuario")
@@ -57,6 +55,15 @@ public class TblturnoEO  extends EntityObject implements Serializable{
 	@NotNull (message = "Ingrese el Estatus")
 	private Integer id_estatus;
 
+	@NotNull (message = "Tipo Documento")
+	private String num_expediente_ori;
+	
+	@NotNull (message = "Abogado Responsable")
+	private Integer id_enc;
+	
+	@NotBlank (message = "Fecha Solicitud")
+	private Date fec_registro;
+	
 	//FECHA_BUSQUEDA
 	private Date fechaInicio;
 	private Date fechaFinal;
