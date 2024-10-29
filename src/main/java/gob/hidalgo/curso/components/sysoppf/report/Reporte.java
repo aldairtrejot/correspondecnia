@@ -68,6 +68,7 @@ public class Reporte extends ConstantesOfiPartPf{
 			String fechaTermino = String.valueOf(fechaC.cambiarFechaDMA(tblturnoEO.getFec_vencimiento()));
 			String numTurno = tblturnoEO.getNum_expediente_ori() + " : " + String.valueOf(tblturnoEO.getNum_oficio());
 			String area = ResultadoCatalogoC.CatalogoAreaSN(tblturnoEO.getId_area_atension());
+			String turnoNull = "";
 			
 			
 			turno.put(getRfecha(), cambiarFecha);
@@ -82,7 +83,8 @@ public class Reporte extends ConstantesOfiPartPf{
 			turno.put(getRFojas(), noNullI(tblturnoEO.getNum_fojas()));
 			turno.put(getRTomo(),noNullI(tblturnoEO.getNum_tomos()));
 			turno.put(getRObservaciones(), tblturnoEO.getDesc_observacion());
-			turno.put(getRTermino(),tblturnoEO.getDesc_termino());
+			//turno.put(getRTermino(),tblturnoEO.getDesc_termino());
+			turno.put(getRTermino(),turnoNull);
 			GenerarReporte();
 		} catch (Exception e) {
 		}
