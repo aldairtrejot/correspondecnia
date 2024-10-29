@@ -18,8 +18,12 @@
                 		<c:if test="#{UsuariosAdmin.usuarioAdmin() and bool}">
 							<p:commandButton value="Agregar" action="agregar" icon="ui-icon-add" style="margin-right: 5px;" />
                 			<p:commandButton value="Modificar" action="editar" icon="ui-icon-edit" style="margin-right: 5px;" />
-                			<p:commandButton value="Cancelar" action="cancelar" icon="ui-icon-alert" style="margin-right: 5px;" />
+                			
                 			<p:commandButton value="Reporte" action="reporte" icon="ui-icon-document" style="margin-right: 5px;" />
+                			
+                			<!-- 
+                			<p:commandButton value="Cancelar" action="cancelar" icon="ui-icon-alert" style="margin-right: 5px;" />
+   							-->
    						</c:if>
    						<c:if test="#{UsuariosAdmin.usuarioAdmin() and !bool}">
 							<p:commandButton value="Agregar" action="agregar" icon="ui-icon-add" style="margin-right: 5px;" />

@@ -72,12 +72,7 @@
 	                			<p:inputText id="inputnum_oficio" value="${correspondencia.num_oficio}" disabled="#{!UsuariosAdmin.usuarioAdmin()}" size="30">
 	                				<f:validateLength maximum="30"/>
 								</p:inputText>
-								
-								<p:outputLabel for="@next" value="Núm. Oficio Sol" style="font-weight: bold;" />
-	                			<p:inputText id="inputnum_oficio_x" value="${correspondencia.desc_boletin}" disabled="#{!UsuariosAdmin.usuarioAdmin()}" size="30">
-	                				<f:validateLength maximum="50"/>
-								</p:inputText>
-								
+
 								<p:outputLabel for="@next" value="Abogado Responsable" style="font-weight: bold"  />
 								<p:selectOneMenu value="#{correspondencia.id_enc}" disabled="false" style="width: 30% !important"  >
 								<f:selectItem itemLabel="Seleccione" itemValue="" noSelectionOption="true" /> 	
@@ -86,19 +81,16 @@
 								
 								<c:if test="${UsuariosAdmin.usuarioAdmin()}">
 									<p:outputLabel for="@next" value="Fecha Solicitud" style="font-weight: bold;" />
-	                				<p:inputText  value="${catalogoC.FechaActual(correspondencia.fecha_reg)}" size="30" disabled="true" />
+	                				<p:calendar  value="${correspondencia.fecha_reg}" size="30" disabled="false" />
 
 	                				<p:outputLabel for="@next" value="Fecha Término" style="font-weight: bold;" />
-	                				<p:inputText id="idfechaX" value="${catalogoC.cambioFechaVen(correspondencia.fec_vencimiento)}" size="30" disabled="true" />
+	                				<p:calendar id="idfechaX" value="${correspondencia.fec_vencimiento}" size="30" disabled="false" />
 								</c:if>
 								
 	                			<p:outputLabel for="@next" value="Turnos H" style="font-weight: bold;" />
 	                			<p:inputText id="inputbturnosf" value="${correspondencia.bturnosf}" disabled="#{!UsuariosAdmin.usuarioAdmin()}" size="30">
 	                				<f:validateLength maximum="10"/>
 								</p:inputText>
-	                			
-	                			<p:outputLabel for="@next" value="Núm. Original" style="font-weight: bold;" />
-	                			<p:inputText id="inputnum_original" value="${correspondencia.num_original}" disabled="#{!UsuariosAdmin.usuarioAdmin()}" size="30"/>
 	                			
 	                			<p:outputLabel for="@next" value="Núm. Fojas" style="font-weight: bold;" />
 	                			<p:inputText id="inputnum_fojas" value="${correspondencia.num_fojas}" disabled="#{!UsuariosAdmin.usuarioAdmin()}" size="30"/>
@@ -112,11 +104,6 @@
 	                			<p:outputLabel for="@next" value="RFC" style="font-weight: bold;" />
 	                			<p:inputText id="inputrfc" value="${correspondencia.rfc}" disabled="#{!UsuariosAdmin.usuarioAdmin()}" size="30">
 	                				<f:validateLength maximum="13"/>
-								</p:inputText>
-
-								<p:outputLabel for="@next" value="Termino" style="font-weight: bold;" />
-	                			<p:inputText id="inputdesc_termino" value="${correspondencia.desc_termino}" disabled="#{!UsuariosAdmin.usuarioAdmin()}" size="70">
-	                				<f:validateLength maximum="50"/>
 								</p:inputText>
 								
 								<p:outputLabel for="@next" value="Remitente" style="font-weight: bold;" />
