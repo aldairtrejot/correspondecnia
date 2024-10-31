@@ -231,92 +231,73 @@
 			<artifactId>jbcrypt</artifactId>
 			<version>0.4</version>
 		</dependency>
-			<dependency>
-		<groupId>com.itextpdf</groupId>
-		<artifactId>itext7-core</artifactId>
-		<version>7.2.3</version>
-		<type>pom</type>
-	</dependency>
-	<dependency>
-		<groupId>com.itextpdf</groupId>
-		<artifactId>cleanup</artifactId>
-		<version>3.0.1</version>
-	</dependency>
-	<dependency>
-		<groupId>org.apache.poi</groupId>
-		<artifactId>poi</artifactId>
-		<version>4.1.2</version>
-	</dependency>
-	<dependency>
-		<groupId>	org.apache.poi</groupId>
-		<artifactId>poi-ooxml</artifactId>
-		<version>4.1.2</version>
-	</dependency>
-	<dependency>
-		<groupId>fr.opensagres.xdocreport</groupId>
-		<artifactId>fr.opensagres.poi.xwpf.converter.pdf</artifactId>
-		<version>2.0.2</version>
-	</dependency>
-	<dependency>
-        <groupId>org.apache.pdfbox</groupId>
-        <artifactId>pdfbox</artifactId>
-        <version>2.0.6</version>
-	</dependency>
-<dependency>
-    <groupId>org.webjars</groupId>
-    <artifactId>pdf-js</artifactId>
-    <version>3.1.81</version>
-</dependency>
-<dependency>
-    <groupId>org.asynchttpclient</groupId>
-    <artifactId>async-http-client</artifactId>
-    <version>2.10.4</version>
-</dependency>
- <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-      <version>2.7</version>
-  </dependency>
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itext7-core</artifactId>
+			<version>7.2.3</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>cleanup</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>	org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.poi.xwpf.converter.pdf</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>2.0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>pdf-js</artifactId>
+			<version>3.1.81</version>
+		</dependency>
+		<dependency>
+			<groupId>org.asynchttpclient</groupId>
+			<artifactId>async-http-client</artifactId>
+			<version>2.10.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.7</version>
+		</dependency>
 
 
 		<!-- MySQL -->
-<dependency> 
-			<groupId>com.mysql</groupId> 
-			<artifactId>mysql-connector-j</artifactId> 
-			<version>8.0.31</version> 
-		</dependency> 
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.0.31</version>
+		</dependency>
 
-		<!-- VERSION 5.1.41
-		<dependency> 
-			<groupId>mysql</groupId> 
-			<artifactId>mysql-connector-java</artifactId> 
-			<version>5.1.41</version> 
-		</dependency> 
-		-->
-		
-		<!-- VERSION 8.0.31 
-		<dependency> 
-			<groupId>com.mysql</groupId> 
-			<artifactId>mysql-connector-j</artifactId> 
-			<version>8.0.31</version> 
-		</dependency> 
-		 -->
-		 
-		 <!-- GENERACION DE REPORTE -->
+
+		<!-- GENERACION DE REPORTE -->
+		<!-- COSUMIR ALFRESCO -->
+		<!-- <dependency> <groupId>org.apache.httpcomponents</groupId> <artifactId>httpclient</artifactId> 
+			<version>4.5.13</version> </dependency> -->
+
+		<dependency>
+			<groupId>org.apache.chemistry.opencmis</groupId>
+			<artifactId>chemistry-opencmis-client-impl</artifactId>
+			<version>1.1.0</version>
+		</dependency>
 
 	</dependencies>
-	
-	<repositories>
-
-<!--
-<repository>
-    <id>groupdocs-artifacts-repository</id>
-    <name>GroupDocs Artifacts Repository</name>
-    <url>https://repository.groupdocs.com/repo/</url>
-</repository>
--->
-
-
-	</repositories>
 
 </project>

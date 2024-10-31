@@ -28,10 +28,10 @@ public class ConstantesOfiPartPf {
 	 * 
 	 * CAT CONSECUTIVOS
 	 */
-	final private String CnomCorrespondencia = "PF";
+	final private String CnomCorrespondencia = "UAF";
 	final private String CnomCircular = "CIR";
 	final private String CnomExpediente = "EXP";
-	final private String CnomOficio = "OFIC";
+	final private String CnomOficio = "OF. UAF-CRH-";
 	final private String CnomTarjeta = "TI";
 	
 	
